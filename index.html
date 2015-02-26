@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link href="styles.css" rel="stylesheet">
+	</head>
+	
+	<body>
+	
+	<div class="row text-center">
+		<img src="nodejs-logo.png">
+	</div><br>
+	
+    <div class="container">
+	<div class="row">
+	
+	<div class="col-sm-8 blog-main">
+
+          <div class="blog-post">
+            <h2 class="blog-post-title">What is Node.js?</h2>
+            <p class="blog-post-meta">February 25th by <a href="https://github.com/ENeises10">Evan</a></p>
+
+            <p>This blog post will show you the basics of Node.js.</p>
+            <hr>
+ 
+            <h3>Defining Node.js</h3>
+			<p>Node.js is an open source, cross-platform runtime environment for server-side and networking applications.</p>
+            <p>It uses <strong>JavaScript</strong> and can be run on OS X, Windows, Linux, and more.</p>
+           
+            <h3>The Growth of Node.js</h3>
+            <p>The reason that many people are seeing why Node.js is more popular than other alternatives is because it is
+			an asynchronous, event-driven framework that is used to build scalable network applications. It adds JavaScript with
+			C/C++ in order to achieve certain things other frameworks can't.</p>
+
+			<h3>Features of Node</h3>
+            <ul>
+              <li>Node lets you perform other tasks while waiting to be notified when the response is available.</li>
+              <li>Node applications use chunking, instead of buffering the data into memory.</li>
+			  <p>An example using Node.js to register callbacks is below.</p>
+			  <pre><code>var http = require('http');
+
+http.request({ hostname: 'example.com' }, function(res) {
+  res.setEncoding('utf8');
+  res.on('data', function(chunk) {
+    console.log(chunk);
+  });
+}).end();</code></pre><br>
+
+            </ul>
+			<p>Node.js allows the use of a non-blocking I/O API as mentioned above, which lets users work on multiple things
+				at a time. Besides tasks that depend on the I/O to complete it's process, every other task can be run simaltaneously.</p>
+            
+			<p>This is a short, concise post about Node.js. There is much more to learn!</p>
+			<hr>
+			<h4>Thank you for reading my post!</h4>
+			<p>For more information on Node.js, please visit the links on the side of the page.</p>
+            
+          </div>
+		  
+
+        </div>
+        
+	<div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>Author of Node.js</h4>
+            <p><img src="ryandahl.png"></p>
+          </div><br>
+          <div class="sidebar-module">
+            <h4>Helpful Links</h4>
+            <ol class="list-unstyled">
+              <li><a href="http://nodejs.org">Node.js</a></li>
+              <li><a href="http://en.wikipedia.org/wiki/Node.js">Wikipedia Page</a></li>
+			  <li><a href="https://www.youtube.com/watch?v=jo_B4LTHi3I">YouTube Tutorial with Ryan Dahl</a></li>
+			  
+            </ol>
+          </div>
+
+        </div>
+		
+	</div>
+	</div>
+	
+	</body>
+
+</html>
